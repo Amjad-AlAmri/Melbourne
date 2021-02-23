@@ -1,0 +1,310 @@
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 15px 0;
+}
+
+/* Fonts, classes are so I can reuse the styles on a variety of elements */
+.merriweather { font-family: 'Merriweather', serif; }
+      .oswald { font-family: 'Oswald', sans-serif; }
+        .lato { font-family: 'Lato', sans-serif; }
+
+/*----------------------my own css starts here--------------------------------*/
+.headerDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.headerDiv h1{
+  font-family: 'Merriweather', serif;
+  color: #f2ff00;
+  text-align: left;
+  display: inline-block;
+  padding-left: 25px;
+}
+
+.headerDiv nav{
+  padding: 15px 0;
+}
+
+.headerDiv a {
+  color: #000;
+  padding-left: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+
+.bold{
+  font-weight: bolder;
+  font-family: 'Oswald', sans-serif;
+  /* text-shadow: 1px 1px 6px #fff;*/
+}
+
+/*--------------------end of headerDiv styling---------------------*/
+
+.underHeaderDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efefef ;
+  padding: 0px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+
+
+}
+
+
+/*---------ends of underHeaderDiv styling----------------*/
+
+
+/*.middleDiv {
+   background:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg');
+   background-image: linear-gradient(to bottom, rgba(238,238, 238, .5), rgba(238,238, 238, .5)),
+   url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg');
+   background-blend-mode: saturation;
+   height: 500px;
+   display: flex;
+   background-position: center;
+   justify-content: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+}*/
+
+.middleDiv{
+    position: relative;
+    /*height: 100vh;
+    width: 100%;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /**/
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.middleDiv::before{
+    content: "";
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.60;
+}
+.childOfMiddle{
+    position: relative;
+    color: #000;
+    font-size: 2rem;
+    line-height: 0.9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 40px;
+    margin: 60px;
+    /*display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 40px;
+    margin: 60px;
+    color: #fff;*/
+}
+
+.childOfMiddle h1{
+  align-self: center;
+  text-transform: capitalize;
+}
+
+.childOfMiddle p{
+    align-self: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    text-transform: none;
+}
+
+.childOfMiddle button{
+    align-self: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #ff5358;
+  border-radius: 4px;
+  border: 0px;
+  padding-left: 80px ;
+  padding-right: 80px;
+  cursor: pointer;
+
+}
+.childOfMiddle button:hover {
+
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #E00007;
+  }
+
+.lastbutton {
+  display: flex;
+   justify-content: center;
+}
+.lastbutton button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #E00007;
+  }
+  .lastbutton button{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #ff5358;
+    border-radius: 4px;
+    border: 0px;
+    padding-left: 80px ;
+    padding-right: 80px;
+  }
+/*---------ends of middleDiv styling----------------*/
+
+
+
+.tableDiv {
+  display: flex;
+  grid-gap: 25px;
+  justify-content: center;
+  text-align: center;
+  margin: 50px;
+  flex-wrap: wrap;
+
+}
+
+
+
+
+
+.firstPic ,.secondPic,.thirdPic {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color:#EFEFEF;
+  }
+
+.underHeaderDiv .firstCol {
+display: flex;
+flex-direction: column;
+background-color: darkgrey;
+margin: 20px;
+width:100%;
+border: 1px solid darkgrey;
+}
+
+@media screen and (max-width: 600px){
+  .underHeaderDiv  {
+flex-direction: column;}
+}
+
+
+.underHeaderDiv .secondRow {
+display: flex;
+flex-direction: row;
+  background-color: white;
+}
+
+
+
+
+.firstRow,.secondRow {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+
+}
+
+.firstRow {
+  font-family: 'Merriweather', serif;  color: #000;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.secondRow {
+  font-family: 'Merriweather', serif;  color: #000;
+  font-weight: lighter;
+  font-size: 12px;
+  text-transform: none;
+  display:flex;
+}
+
+.thirdRow:hover {
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.20);
+  }
+
+.firstOfLast{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 50px;
+}
+
+.childOflast {
+  text-align: center;
+}
+
+.insidePic1 {
+   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/fitzroy.jpg');
+  background-size: cover;
+}
+.insidePic2 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/st-kilda.jpg');
+  background-size: cover;
+}
+
+.insidePic3 {
+   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/central-business-district.jpg');
+  background-size: cover;
+
+}
+
+.insidePic1,.insidePic2  ,.insidePic3 {
+
+  display:flex;
+  color:#000;
+  font-size:9px;
+  background-position:  center;
+  height:250px;
+  width:100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+  /*-------ends of tabelDiv-------------------------------*/
+
+footer {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+
+    font-family: 'Merriweather', serif;  color: #000;
+    font-size: 14px;
+}
+
+  /*-------ends of footer-------------------------------*/
